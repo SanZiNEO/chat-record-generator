@@ -4,12 +4,10 @@ A highly customizable tool for generating chat record screenshots, designed for 
 
 ## Quick Start
 
-1. Open `聊天记录生成器.html` in any modern browser
+1. Open `chat-record-generator.html` in any modern browser
 2. Add messages and adjust styles in the left panel — preview updates in real time on the right
 3. Click **Export JSON** to save configuration and messages; import to restore later
 4. You can also import pre-built templates from the `templates/` directory to get started quickly
-
-No installation, no server — a single HTML file that works offline.
 
 ## Features
 
