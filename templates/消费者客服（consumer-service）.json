@@ -1,0 +1,163 @@
+{
+  "messages": [
+    {
+      "id": "m1",
+      "type": "text",
+      "sender": "system",
+      "content": "【实验材料】请阅读以下在线客服对话，然后完成后续问卷。",
+      "imgUrl": "",
+      "timestamp": "14:30"
+    },
+    {
+      "id": "m2",
+      "type": "text",
+      "sender": "sender",
+      "content": "你好，我上个月在你们平台买了一个蓝牙耳机，最近发现左耳会有杂音，想问问怎么处理。",
+      "imgUrl": "",
+      "timestamp": "14:31"
+    },
+    {
+      "id": "m3",
+      "type": "text",
+      "sender": "receiver",
+      "content": "您好，非常抱歉给您带来不便。请问方便提供一下订单编号吗？我帮您查一下售后进度。",
+      "imgUrl": "",
+      "timestamp": "14:32"
+    },
+    {
+      "id": "m4",
+      "type": "text",
+      "sender": "sender",
+      "content": "订单号是 SN2026051832047，购买日期是 5 月 18 号。",
+      "imgUrl": "",
+      "timestamp": "14:33"
+    },
+    {
+      "id": "m5",
+      "type": "text",
+      "sender": "receiver",
+      "content": "查到了，您的订单仍在 30 天质保期内。我这边可以直接为您安排换新，预计 3 个工作日内发出。您也可以选择全额退款到原支付方式。您更倾向于哪种方案？",
+      "imgUrl": "",
+      "timestamp": "14:35"
+    },
+    {
+      "id": "m6",
+      "type": "text",
+      "sender": "sender",
+      "content": "那帮我换新吧，谢谢。对了，运费需要我出吗？",
+      "imgUrl": "",
+      "timestamp": "14:37"
+    },
+    {
+      "id": "m7",
+      "type": "text",
+      "sender": "receiver",
+      "content": "不用，换新全程免运费。稍后您会收到一条短信确认换货地址，确认后我们立即安排发货。还有其他需要帮您的吗？",
+      "imgUrl": "",
+      "timestamp": "14:38"
+    },
+    {
+      "id": "m8",
+      "type": "text",
+      "sender": "sender",
+      "content": "没有了，服务态度很好，谢谢！",
+      "imgUrl": "",
+      "timestamp": "14:39"
+    },
+    {
+      "id": "m9",
+      "type": "text",
+      "sender": "system",
+      "content": "【对话结束】请翻至下一页填写问卷。",
+      "imgUrl": "",
+      "timestamp": "14:40"
+    }
+  ],
+  "config": {
+    "header": {
+      "show": 1,
+      "bg": "#1565c0",
+      "textColor": "#ffffff",
+      "showBack": 1,
+      "name": "官方客服",
+      "nameSize": 18,
+      "nameColor": "#ffffff",
+      "nameAlign": "center",
+      "nameBold": 1,
+      "showAvatar": 0,
+      "avatarSize": 36,
+      "avatarPos": "left",
+      "height": 53
+    },
+    "receiver": {
+      "alignX": 0,
+      "showAvatar": 1,
+      "avatarSize": 44,
+      "avatarPos": "left",
+      "showNick": 1,
+      "nickText": "客服代表",
+      "nickSize": 12,
+      "nickColor": "#1565c0",
+      "nickAlign": "left",
+      "showTime": 1,
+      "timePos": "below",
+      "bubble": "#ffffff",
+      "rad": 18,
+      "pad": 14,
+      "pMaxW": 80,
+      "arrow": 1,
+      "shadow": 1,
+      "textSize": 15,
+      "textColor": "#333",
+      "textLH": 1.6,
+      "textAlign": "left",
+      "textBold": 0,
+      "textItalic": 0
+    },
+    "sender": {
+      "alignX": 100,
+      "showAvatar": 1,
+      "avatarSize": 44,
+      "avatarPos": "right",
+      "showNick": 1,
+      "nickText": "消费者",
+      "nickSize": 12,
+      "nickColor": "#999",
+      "nickAlign": "right",
+      "showTime": 1,
+      "timePos": "below",
+      "bubble": "#e3f2fd",
+      "rad": 18,
+      "pad": 14,
+      "pMaxW": 80,
+      "arrow": 1,
+      "shadow": 1,
+      "textSize": 15,
+      "textColor": "#333",
+      "textLH": 1.6,
+      "textAlign": "left",
+      "textBold": 0,
+      "textItalic": 0
+    },
+    "system": {
+      "textSize": 13,
+      "textColor": "#888",
+      "bg": "transparent",
+      "rad": 4,
+      "pad": 6
+    },
+    "chat": {
+      "bg": "#f5f5f5",
+      "pad": 20,
+      "width": 520
+    },
+    "footer": {
+      "show": 1,
+      "bg": "#f9f9f9",
+      "height": 70,
+      "rad": 24,
+      "showAdd": 1
+    }
+  },
+  "layout": "left-right"
+}
