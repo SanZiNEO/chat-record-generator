@@ -1,2 +1,6 @@
-# chat-record-generator
-可高度定制的聊天记录生成工具。面向科研场景，用于准备实验材料或问卷中使用的对话截图。支持样式独立调节、布局预设、JSON 导出/导入。
+# 聊天记录生成器 · Chat Record Generator
+
+[🇨🇳 中文](README_zh.md) · [🇺🇸 English](README_en.md)
+
+A highly customizable tool for generating chat record screenshots, designed for academic researchers preparing experimental stimuli and survey materials.
+
