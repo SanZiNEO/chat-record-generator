@@ -1,0 +1,147 @@
+{
+  "messages": [
+    {
+      "id": "m1",
+      "type": "text",
+      "sender": "system",
+      "content": "【实验材料】请阅读以下在线答疑对话，然后完成后续问卷。",
+      "imgUrl": "",
+      "timestamp": "19:00"
+    },
+    {
+      "id": "m2",
+      "type": "text",
+      "sender": "sender",
+      "content": "老师你好，我在做第三章的作业，卡在第 5 题了。题目要求用贝叶斯定理算条件概率，但我一直搞不清 P(A|B) 和 P(B|A) 的区别。",
+      "imgUrl": "",
+      "timestamp": "19:02"
+    },
+    {
+      "id": "m3",
+      "type": "text",
+      "sender": "receiver",
+      "content": "这个问题很常见。P(A|B) 是在「已知 B 发生」的前提下 A 发生的概率，P(B|A) 反过来。你看题目给出的数据，先判断哪个是「已知条件」，哪个是「要求的概率」，就不容易弄混了。",
+      "imgUrl": "",
+      "timestamp": "19:05"
+    },
+    {
+      "id": "m4",
+      "type": "text",
+      "sender": "sender",
+      "content": "那这道题里「已知检测结果为阳性」应该是条件 B，然后求「真正患病的概率」就是 P(患病|阳性) 对吗？",
+      "imgUrl": "",
+      "timestamp": "19:07"
+    },
+    {
+      "id": "m5",
+      "type": "text",
+      "sender": "receiver",
+      "content": "完全正确。然后套贝叶斯公式：P(患病|阳性) = P(阳性|患病)×P(患病) / P(阳性)。其中 P(阳性) 需要用全概率公式展开。你做一遍然后发给我看看？",
+      "imgUrl": "",
+      "timestamp": "19:09"
+    },
+    {
+      "id": "m6",
+      "type": "text",
+      "sender": "sender",
+      "content": "好的我试试，谢谢老师！",
+      "imgUrl": "",
+      "timestamp": "19:10"
+    },
+    {
+      "id": "m7",
+      "type": "text",
+      "sender": "system",
+      "content": "【对话结束】请翻至下一页填写问卷。",
+      "imgUrl": "",
+      "timestamp": "19:11"
+    }
+  ],
+  "config": {
+    "header": {
+      "show": 1,
+      "bg": "#2e7d32",
+      "textColor": "#ffffff",
+      "showBack": 1,
+      "name": "课程答疑",
+      "nameSize": 18,
+      "nameColor": "#ffffff",
+      "nameAlign": "center",
+      "nameBold": 1,
+      "showAvatar": 0,
+      "avatarSize": 36,
+      "avatarPos": "left",
+      "height": 53
+    },
+    "receiver": {
+      "alignX": 0,
+      "showAvatar": 1,
+      "avatarSize": 44,
+      "avatarPos": "left",
+      "showNick": 1,
+      "nickText": "助教",
+      "nickSize": 12,
+      "nickColor": "#2e7d32",
+      "nickAlign": "left",
+      "showTime": 1,
+      "timePos": "below",
+      "bubble": "#ffffff",
+      "rad": 18,
+      "pad": 14,
+      "pMaxW": 80,
+      "arrow": 1,
+      "shadow": 1,
+      "textSize": 15,
+      "textColor": "#333",
+      "textLH": 1.6,
+      "textAlign": "left",
+      "textBold": 0,
+      "textItalic": 0
+    },
+    "sender": {
+      "alignX": 100,
+      "showAvatar": 1,
+      "avatarSize": 44,
+      "avatarPos": "right",
+      "showNick": 1,
+      "nickText": "学生",
+      "nickSize": 12,
+      "nickColor": "#999",
+      "nickAlign": "right",
+      "showTime": 1,
+      "timePos": "below",
+      "bubble": "#e8f5e9",
+      "rad": 18,
+      "pad": 14,
+      "pMaxW": 80,
+      "arrow": 1,
+      "shadow": 1,
+      "textSize": 15,
+      "textColor": "#333",
+      "textLH": 1.6,
+      "textAlign": "left",
+      "textBold": 0,
+      "textItalic": 0
+    },
+    "system": {
+      "textSize": 13,
+      "textColor": "#888",
+      "bg": "transparent",
+      "rad": 4,
+      "pad": 6
+    },
+    "chat": {
+      "bg": "#f5f5f5",
+      "pad": 20,
+      "width": 520
+    },
+    "footer": {
+      "show": 1,
+      "bg": "#f9f9f9",
+      "height": 70,
+      "rad": 24,
+      "showAdd": 1
+    }
+  },
+  "layout": "left-right"
+}
