@@ -121,6 +121,9 @@ body{font-family:'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif;backgroun
   </div>
   <div class="sel-bar" id="selBar">
     <span id="selInfo">已选中</span>
+    <input type="text" id="selTime" size="5" placeholder="时间" onchange="app.setTimestamp(this.value)" style="font-size:11px;padding:2px 4px;border:1px solid #ddd;border-radius:3px;width:50px">
+    <button class="btn btn-out" id="btnUp" onclick="app.moveUp()" title="上移" style="font-size:11px;padding:2px 6px">↑</button>
+    <button class="btn btn-out" id="btnDown" onclick="app.moveDown()" title="下移" style="font-size:11px;padding:2px 6px">↓</button>
     <button class="btn btn-out" onclick="app.edit()">编辑</button>
     <button class="btn btn-dan" onclick="app.deleteMsg()">删除</button>
     <button class="btn btn-out" onclick="app.deselect()">取消</button>
@@ -398,12 +401,43 @@ class ChatGenerator {
     this.messages = []; this.selectedId = null; this.render();
   }
 
+  moveUp() {
+    if (!this.selectedId) return;
+    const idx = this.messages.findIndex(m => m.id === this.selectedId);
+    if (idx > 0) {
+      [this.messages[idx], this.messages[idx - 1]] = [this.messages[idx - 1], this.messages[idx]];
+      this._renderChat();
+    }
+  }
+
+  moveDown() {
+    if (!this.selectedId) return;
+    const idx = this.messages.findIndex(m => m.id === this.selectedId);
+    if (idx < this.messages.length - 1) {
+      [this.messages[idx], this.messages[idx + 1]] = [this.messages[idx + 1], this.messages[idx]];
+      this._renderChat();
+    }
+  }
+
+  setTimestamp(val) {
+    if (!this.selectedId) return;
+    const m = this.messages.find(x => x.id === this.selectedId);
+    if (m) { m.timestamp = val; this._renderChat(); }
+  }
+
   _updateSelBar() {
     const bar = document.getElementById('selBar');
     if (this.selectedId) {
       bar.classList.add('show');
-      const m = this.messages.find(x => x.id === this.selectedId);
+      const idx = this.messages.findIndex(m => m.id === this.selectedId);
+      const m = idx !== -1 ? this.messages[idx] : null;
       document.getElementById('selInfo').textContent = m ? '已选中：' + ((m.content || '').substring(0, 15) || '[图片]') : '已选中';
+      const timeEl = document.getElementById('selTime');
+      if (timeEl) timeEl.value = m ? m.timestamp : '';
+      const upEl = document.getElementById('btnUp');
+      const downEl = document.getElementById('btnDown');
+      if (upEl) upEl.disabled = idx <= 0;
+      if (downEl) downEl.disabled = idx < 0 || idx >= this.messages.length - 1;
     } else { bar.classList.remove('show'); }
   }
 
@@ -714,7 +748,7 @@ const HDR = {
 // ========== GLOBAL SHORTCUTS ==========
 const app = new ChatGenerator();
 window._app = app;
-window.app = { edit:()=>app.edit(), deleteMsg:()=>app.deleteMsg(), deselect:()=>app.deselect() };
+window.app = { edit:()=>app.edit(), deleteMsg:()=>app.deleteMsg(), deselect:()=>app.deselect(), moveUp:()=>app.moveUp(), moveDown:()=>app.moveDown(), setTimestamp:(v)=>app.setTimestamp(v) };
 window.addMessage = (side) => app.add('text', side === 'left' ? 'receiver' : 'sender', document.getElementById(side === 'left' ? 'mgText' : 'mgText').value.trim());
 
 // ========== INIT ==========
